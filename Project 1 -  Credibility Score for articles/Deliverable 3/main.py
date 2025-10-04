@@ -39,7 +39,7 @@ for message in st.session_state.messages:
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
 
-if prompt := st.chat_input("Enter a URL, paste text, or ask a question..."):
+if prompt := st.chat_input("URL, text (>50 words for analysis), or a question..."):
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)
@@ -53,10 +53,9 @@ if prompt := st.chat_input("Enter a URL, paste text, or ask a question..."):
             if is_url or is_long_text:
                 response = analyze_credibility(prompt)
             else:
-                # The conversation history is passed directly
                 conversation_history = [msg for msg in st.session_state.messages if msg["role"] in ["user", "assistant"]]
-                # The call to get_openai_response is now simpler
                 response = get_openai_response(conversation_history, openai_client)
+
         
         st.markdown(response)
 

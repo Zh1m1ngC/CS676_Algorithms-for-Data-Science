@@ -1,0 +1,12 @@
+# requirements.txt
+
+streamlit
+openai
+trafilatura
+beautifulsoup4
+textblob
+requests
+python-dotenv
+pytest
+lxml
+lxml_html_clean
