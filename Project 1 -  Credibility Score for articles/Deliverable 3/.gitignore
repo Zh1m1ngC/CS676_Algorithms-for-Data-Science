@@ -1,0 +1,16 @@
+# .gitignore
+
+# Environment variables
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment folders
+.venv/
+venv/
+env/
+
+# Streamlit
+.streamlit/

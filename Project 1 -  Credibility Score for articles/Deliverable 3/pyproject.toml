@@ -1,0 +1,16 @@
+# pyproject.toml
+
+[project]
+name = "streamlit-credibility-chatbot"
+version = "1.0.0"
+description = "A Streamlit chatbot for credibility analysis and general conversation."
+requires-python = ">=3.8"
+dependencies = [
+    "streamlit",
+    "openai",
+    "trafilatura",
+    "beautifulsoup4",
+    "textblob",
+    "requests",
+    "python-dotenv",
+]
