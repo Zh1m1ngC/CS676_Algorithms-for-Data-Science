@@ -13,4 +13,5 @@ dependencies = [
     "textblob",
     "requests",
     "python-dotenv",
+    "pytest", # Add this for testing
 ]
