@@ -1,0 +1,13 @@
+Ignore the config file containing the API key
+
+config.py
+
+Ignore Python cache files
+
+pycache/
+*.pyc
+
+Ignore virtual environment folders
+
+venv/
+.venv/

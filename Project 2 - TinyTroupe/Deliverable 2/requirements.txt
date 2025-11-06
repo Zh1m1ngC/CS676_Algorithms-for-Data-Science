@@ -1,0 +1,13 @@
+Installs TinyTroupe directly from the GitHub repository
+
+git+https://github.com/microsoft/TinyTroupe.git
+
+Core dependency for the OpenAI API
+
+openai
+
+Data science libraries for the agent to use
+
+pandas
+scikit-learn
+matplotlib
