@@ -1,0 +1,5 @@
+streamlit
+openai
+tinytroupe
+pandas
+scikit-learn
