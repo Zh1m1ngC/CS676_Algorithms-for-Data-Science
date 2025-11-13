@@ -1,0 +1,42 @@
+# .github/workflows/python-test.yml
+
+name: Run Python Tests
+
+# This action runs on every 'push' to your main branch
+# and on every 'pull_request'
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    # This job will run on a cloud server (Ubuntu)
+    runs-on: ubuntu-latest
+
+    # This tests your code against multiple Python versions
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.10", "3.11"]
+
+    steps:
+    # 1. Checks out your repository's code so the job can access it
+    - uses: actions/checkout@v4
+
+    # 2. Sets up the specified Python version
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    # 3. Installs your project's dependencies
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    # 4. Runs pytest! This is the "test run"
+    - name: Test with pytest
+      run: |
+        pytest

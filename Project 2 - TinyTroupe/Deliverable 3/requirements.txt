@@ -3,3 +3,4 @@ openai
 tinytroupe
 pandas
 scikit-learn
+pytest
