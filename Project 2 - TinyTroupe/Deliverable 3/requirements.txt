@@ -1,6 +1,16 @@
-streamlit
+# Installs TinyTroupe directly from the GitHub repository
+git+https://github.com/microsoft/TinyTroupe.git
+
+# Core dependency for the OpenAI API
 openai
-tinytroupe
+
+# Streamlit for the web interface
+streamlit
+
+# Data science libraries
 pandas
 scikit-learn
+matplotlib
+
+# Testing library
 pytest
