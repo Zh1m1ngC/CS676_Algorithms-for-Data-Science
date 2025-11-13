@@ -1,0 +1,10 @@
+{
+  "name": "My Project Codespace",
+  // This tells it to use a standard base image
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+
+  "features": {
+    // This line tells it to add the shellcheck feature
+    "ghcr.io/devcontainers/features/shellcheck:1": {}
+  }
+}
